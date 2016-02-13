@@ -12,4 +12,11 @@
 
     </style>
 
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+
+    </style>
+
 </resources>
