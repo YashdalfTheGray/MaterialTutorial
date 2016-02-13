@@ -12,10 +12,23 @@
 
     </style>
 
+    <style name="OverflowButtonStyleOverride" parent="Base.Widget.AppCompat.ActionButton.Overflow">
+
+        <item name="android:src">@drawable/ic_more_vert_white_24dp</item>
+
+    </style>
+
     <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
 
         <item name="android:textColorPrimary">@color/colorText</item>
         <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyleOverride</item>
+
+    </style>
+
+    <style name="PopupTheme" parent="ThemeOverlay.AppCompat.Light">
+
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
 
     </style>
 
