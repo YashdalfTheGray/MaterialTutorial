@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setTitle("Test Material App");
-        getSupportActionBar().setSubtitle("Version " + Build.VERSION.SDK_INT);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -65,11 +65,26 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        String msg = "";
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.action_delete:
+                msg = "Delete";
+                break;
+            case R.id.action_edit:
+                msg = "Edit";
+                break;
+            case R.id.action_search:
+                msg = "Search";
+                break;
+            case R.id.action_settings:
+                msg = "Settings";
+                break;
+            default:
+                msg = "Unknown";
         }
+
+        Toast.makeText(this, msg + " selected!", Toast.LENGTH_SHORT).show();
 
         return super.onOptionsItemSelected(item);
     }
