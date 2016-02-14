@@ -39,7 +39,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp">
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/cardTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                     android:textSize="24sp"
                     android:textColor="@color/colorPrimaryText"/>
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/cardSubtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
