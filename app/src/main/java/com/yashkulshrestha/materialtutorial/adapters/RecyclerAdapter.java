@@ -92,13 +92,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
                 }
             };
 
+            this.current = currentObj;
+
             this.title.setText(current.getTitle());
             this.description.setText(current.getDescription());
             this.image.setImageResource(current.getImageId());
             this.action1.setOnClickListener(onCardActionClickListener);
             this.action2.setOnClickListener(onCardActionClickListener);
             this.position = position;
-            this.current = currentObj;
         }
     }
 
