@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.yashkulshrestha.materialtutorial.MainActivity">
+    tools:context="com.yashkulshrestha.materialtutorial.MainActivity"
+    android:id="@+id/main_app_view">
 
     <include
         android:id="@+id/toolbar"
