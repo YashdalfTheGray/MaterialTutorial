@@ -8,5 +8,6 @@
     <string name="card_title">Card Title</string>
     <string name="card_subtitle">Card Subtitle</string>
     <string name="card_action1">Action 1</string>
-    <string name="card_action2">Action 2</string>
+    <string name="card_action2">Delete</string>
+    <string name="action_add">Add</string>
 </resources>
