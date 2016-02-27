@@ -1,7 +1,6 @@
 package com.yashkulshrestha.materialtutorial.adapters;
 
 import android.content.Context;
-import android.support.annotation.MainThread;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,9 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.yashkulshrestha.materialtutorial.MainActivity;
 import com.yashkulshrestha.materialtutorial.R;
 import com.yashkulshrestha.materialtutorial.models.SampleCard;
 
