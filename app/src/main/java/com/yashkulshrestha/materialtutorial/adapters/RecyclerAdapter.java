@@ -2,6 +2,7 @@ package com.yashkulshrestha.materialtutorial.adapters;
 
 import android.content.Context;
 import android.support.annotation.MainThread;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -88,7 +89,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
                         default:
                             message = "Don't know what happened here!";
                     }
-                    Toast.makeText(v.getContext().getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                    Snackbar.make(v.getRootView().findViewById(R.id.main_app_view), message, Snackbar.LENGTH_SHORT).show();
                 }
             };
 

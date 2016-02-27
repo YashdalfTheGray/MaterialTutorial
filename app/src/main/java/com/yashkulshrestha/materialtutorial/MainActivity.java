@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             toolbar.setElevation(10f);
-        } else {
+        }
+        else {
             // Non-material design APIs here.
         }
         // ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 msg = "Unknown";
         }
 
-        Toast.makeText(this, msg + " selected!", Toast.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(R.id.main_app_view), msg + " selected!", Snackbar.LENGTH_SHORT).show();
 
         return super.onOptionsItemSelected(item);
     }
