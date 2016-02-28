@@ -10,4 +10,9 @@
     <string name="card_action1">Action 1</string>
     <string name="card_action2">Delete</string>
     <string name="action_add">Add</string>
+    <string name="nav_bar_item_text">3D Rotation</string>
+    <string name="nav_item_img_desc">Navigation item image</string>
+    <string name="nav_header_name">First Last</string>
+    <string name="nav_header_email">first.last@test.com</string>
+    <string name="account_image_desc" />
 </resources>
