@@ -15,4 +15,6 @@
     <string name="nav_header_name">First Last</string>
     <string name="nav_header_email">first.last@test.com</string>
     <string name="account_image_desc" />
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
 </resources>
