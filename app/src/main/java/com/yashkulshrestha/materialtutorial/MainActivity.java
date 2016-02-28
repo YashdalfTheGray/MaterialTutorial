@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+    private RecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,25 +75,30 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id) {
             case R.id.action_add:
-                msg = "Add";
+                SampleCard toAdd = new SampleCard();
+                toAdd.setTitle("Sample Card" + adapter.getItemCount());
+                toAdd.setDescription("Description");
+                toAdd.setImageId(R.drawable.common_google_signin_btn_icon_dark);
+                adapter.addItem(adapter.getItemCount(), toAdd);
+                msg = "New item added.";
                 break;
             case R.id.action_delete:
-                msg = "Delete";
+                msg = "Delete Selected";
                 break;
             case R.id.action_edit:
-                msg = "Edit";
+                msg = "Edit Selected";
                 break;
             case R.id.action_search:
-                msg = "Search";
+                msg = "Search Selected";
                 break;
             case R.id.action_settings:
-                msg = "Settings";
+                msg = "Settings Selected";
                 break;
             default:
-                msg = "Unknown";
+                msg = "Unknown Selected";
         }
 
-        Snackbar.make(findViewById(R.id.main_app_view), msg + " selected!", Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(R.id.main_app_view), msg, Snackbar.LENGTH_SHORT).show();
 
         return super.onOptionsItemSelected(item);
     }
@@ -139,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupRecyclerView() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.mainRecyclerView);
-        RecyclerAdapter adapter = new RecyclerAdapter(this, SampleCard.getData());
+        adapter = new RecyclerAdapter(this, SampleCard.getData());
         recyclerView.setAdapter(adapter);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);

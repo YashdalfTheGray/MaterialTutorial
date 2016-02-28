@@ -52,10 +52,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
         holder.setData(currentObj, position);
     }
 
+    public void addItem(int position, SampleCard sampleCard) {
+        mData.add(position, sampleCard);
+        notifyItemInserted(position);
+    }
+
+    public void removeItem(int position) {
+        mData.remove(position);
+        notifyItemRemoved(position);
+    }
+
     class SampleCardViewHolder extends RecyclerView.ViewHolder {
 
         TextView title, description;
-        Button action1, action2;
+        Button action1, deleteAction;
         ImageView image;
         int position;
         SampleCard current;
@@ -67,7 +77,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
             description = (TextView) itemView.findViewById(R.id.cardSubtitle);
             image = (ImageView) itemView.findViewById(R.id.cardImage);
             action1 = (Button) itemView.findViewById(R.id.cardAction1);
-            action2 = (Button) itemView.findViewById(R.id.cardAction2);
+            deleteAction = (Button) itemView.findViewById(R.id.cardAction2);
 
         }
 
@@ -81,7 +91,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
                             message = "Position " + position + " Action 1 button pressed";
                             break;
                         case R.id.cardAction2:
-                            message = "Position " + position + " Action 2 button pressed";
+                            removeItem(position);
+                            message = "Item deleted!";
                             break;
                         default:
                             message = "Don't know what happened here!";
@@ -96,7 +107,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
             this.description.setText(current.getDescription());
             this.image.setImageResource(current.getImageId());
             this.action1.setOnClickListener(onCardActionClickListener);
-            this.action2.setOnClickListener(onCardActionClickListener);
+            this.deleteAction.setOnClickListener(onCardActionClickListener);
             this.position = position;
         }
     }
