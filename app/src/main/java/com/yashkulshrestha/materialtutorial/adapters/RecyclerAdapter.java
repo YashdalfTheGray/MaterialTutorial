@@ -55,11 +55,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
     public void addItem(int position, SampleCard sampleCard) {
         mData.add(position, sampleCard);
         notifyItemInserted(position);
+        notifyItemRangeChanged(position, mData.size());
     }
 
     public void removeItem(int position) {
         mData.remove(position);
         notifyItemRemoved(position);
+        notifyItemRangeChanged(position, mData.size());
     }
 
     class SampleCardViewHolder extends RecyclerView.ViewHolder {
