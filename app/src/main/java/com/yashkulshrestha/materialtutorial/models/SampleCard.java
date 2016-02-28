@@ -56,7 +56,8 @@ public class SampleCard {
     }
 
     public static int[] getImages() {
-        int[] images = {
+
+        return new int[]{
                 R.drawable.common_google_signin_btn_icon_dark,
                 R.drawable.common_google_signin_btn_icon_light,
                 R.drawable.common_google_signin_btn_text_dark,
@@ -67,8 +68,6 @@ public class SampleCard {
                 R.drawable.common_plus_signin_btn_icon_light,
                 R.drawable.common_plus_signin_btn_text_light
         };
-
-        return images;
     }
 
 }
