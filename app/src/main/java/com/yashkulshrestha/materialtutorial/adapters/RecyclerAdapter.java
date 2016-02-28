@@ -87,19 +87,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sample
             View.OnClickListener onCardActionClickListener = new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String message;
-                    switch (v.getId()) {
-                        case R.id.cardAction1:
-                            message = "Position " + position + " Action 1 button pressed";
-                            break;
-                        case R.id.cardAction2:
-                            removeItem(position);
-                            message = "Item deleted!";
-                            break;
-                        default:
-                            message = "Don't know what happened here!";
-                    }
-                    Snackbar.make(v.getRootView().findViewById(R.id.main_app_view), message, Snackbar.LENGTH_SHORT).show();
+                String message;
+                switch (v.getId()) {
+                    case R.id.cardAction1:
+                        message = "Position " + position + " Action 1 button pressed";
+                        break;
+                    case R.id.cardAction2:
+                        removeItem(position);
+                        message = "Item deleted!";
+                        break;
+                    default:
+                        message = "Don't know what happened here!";
+                }
+                Snackbar.make(v.getRootView().findViewById(R.id.main_app_view), message, Snackbar.LENGTH_SHORT).show();
                 }
             };
 
